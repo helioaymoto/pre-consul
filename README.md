@@ -31,10 +31,9 @@ kubectl create -n consul -f storageClass.yaml
 kubectl create -n consul -f persistentVolume.yaml
 kubectl create -n consul -f persistentVolumeClaim.yaml
 
-kubectl get pods -n=consul
 kubectl get storageclass -n=consul
-kugectl get pv -n=consul
-kugectl get pvc -n=consul
+kubectl get pv -n=consul
+kubectl get pvc -n=consul
 ```
 Next you can follow the instruction in HashiCorp 
 https://www.consul.io/docs/platform/k8s/run.html
