@@ -13,9 +13,19 @@ This is a preconditional Storage configuration required to install consul in a K
 5) StorageClass, PV, PVC and Consull will installed in a name space called **Consul**
 
 ## Step by Step to build
+Create the directories in each kubernet worker node as:
+```
+/mnt/disk/consul-pv-server-0  ; this in 1st node
+/mnt/disk/consul-pv-server-1  ; this in 2nd node
+/mnt/disk/consul-pv-server-2  ; this in 3rd node
+```
+Clone the project and run the commands bellow:
 ```
 git clone https://github.com/helioaymoto/pre-consul.git
 cd pre-consul
+```
+In the persitentVolume.yaml change the IP address for you Kubernet workers and then run the commands:
+```
 kubectl create -f namespace.yaml
 kubectl create -n consul -f storageClass.yaml
 kubectl create -n consul -f persistentVolume.yaml
