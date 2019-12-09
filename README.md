@@ -5,7 +5,7 @@ Consul service discovery in Kubernet Cluster.
 This is a preconditional Storage configuration required to install consul in a Kubernet Cluster.
 
 
-## Come Observation about this project
+## Some Observation about this project
 1) Implement Storage class required to install Consul in Kubernet Cluster
 2) It is necessary to have at least 3 workers nodes in a kubernet cluster
 3) Helm is installed
